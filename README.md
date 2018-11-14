@@ -5,6 +5,17 @@
 
 ~ forsaken: leaving the old centralised access control world
 
-using discipl core, access for any self sovereign actor can be granted and revoked by another actor if it is lawfully the actor that decides. The idea is that handling needs of people sometimes involves other human people to evaluate private information and that access to information shared in private with organisations must always still be granted to specific members of these organisations by the subject in need (or as described in law) on a need to know basis.
+Used in tandem with discipl-abundance-service
 
-notice : experimental
+the API for now contains:
+
+allow(ssid, dids)
+
+Denotes that only given did's are acted upon. It depends on the discipl platform how this is enforced.
+It simply denotes this through a (revokeable) verifiable claim.
+
+require(ssid, predicate, dids)
+
+Denotes that only did's are acted upon that communicated a certain proof in the form of an attestation issued by given did's
+using the given predicate. It simply denotes this through a (revokeable) verifiable claim.
+
